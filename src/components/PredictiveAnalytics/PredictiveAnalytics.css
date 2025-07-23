@@ -1,0 +1,480 @@
+.predictive-analytics {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.predictive-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px 0;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header-description {
+  color: var(--text-secondary);
+  margin: 0 0 30px 0;
+  font-size: 0.95rem;
+}
+
+/* Success Probability */
+.success-probability {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-probability::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.probability-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.probability-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.probability-value {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.probability-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  opacity: 0.95;
+}
+
+.probability-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.probability-meter {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.probability-fill {
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+.probability-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Predictions Section */
+.predictions-section {
+  margin-bottom: 40px;
+}
+
+.predictions-section h3 {
+  margin: 0 0 20px 0;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.predictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.prediction-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.prediction-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(76, 205, 196, 0.15);
+  transform: translateY(-2px);
+}
+
+.prediction-day {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.day-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 2px;
+}
+
+.day-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.prediction-rate {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.rate-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.rate-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.confidence-indicator {
+  text-align: center;
+}
+
+.confidence-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.confidence-bar {
+  height: 6px;
+  background: var(--background-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+  border-radius: 3px;
+}
+
+.confidence-value {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Risk Factors */
+.risk-factors-section {
+  margin-bottom: 40px;
+}
+
+.risk-factors-section h3 {
+  margin: 0 0 20px 0;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.risk-factors {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.risk-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-left: 4px solid transparent;
+}
+
+.risk-card.severity-high {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.risk-card.severity-medium {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.risk-card.severity-low {
+  border-left-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.risk-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.risk-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.risk-dot.severity-high {
+  background: #ef4444;
+}
+
+.risk-dot.severity-medium {
+  background: #f59e0b;
+}
+
+.risk-dot.severity-low {
+  background: #3b82f6;
+}
+
+.risk-severity {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.risk-content {
+  flex: 1;
+}
+
+.risk-message {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.risk-recommendation {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Recommendations */
+.recommendations-section {
+  margin-bottom: 40px;
+}
+
+.recommendations-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px 0;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.recommendation-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.recommendation-card.priority-high::before {
+  background: #ef4444;
+}
+
+.recommendation-card.priority-medium::before {
+  background: #f59e0b;
+}
+
+.recommendation-card.priority-low::before {
+  background: #3b82f6;
+}
+
+.recommendation-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(76, 205, 196, 0.1);
+  transform: translateY(-2px);
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  color: var(--primary-color);
+}
+
+.rec-priority {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.recommendation-card.priority-high .rec-priority {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.recommendation-card.priority-medium .rec-priority {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.recommendation-card.priority-low .rec-priority {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.rec-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.rec-message {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.rec-action {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .predictive-analytics {
+    padding: 15px;
+  }
+
+  .success-probability {
+    padding: 24px;
+  }
+
+  .probability-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .probability-value {
+    font-size: 2.5rem;
+  }
+
+  .predictions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .prediction-card {
+    padding: 16px;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .risk-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .risk-indicator {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .recommendation-card {
+    padding: 16px;
+  }
+
+  .predictions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

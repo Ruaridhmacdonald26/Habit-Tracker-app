@@ -1,0 +1,126 @@
+.daily-quote {
+  background: var(--gradient-card);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.daily-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-button);
+}
+
+.daily-quote::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.quote-icon {
+  position: absolute;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
+  color: var(--color-primary);
+  opacity: 0.6;
+}
+
+.quote-content {
+  padding-left: var(--spacing-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-text {
+  color: var(--color-text-white);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quote-author {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: right;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.quote-decoration {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  font-size: 1.5rem;
+  opacity: 0.7;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .daily-quote {
+    padding: var(--spacing-lg);
+  }
+
+  .quote-content {
+    padding-left: var(--spacing-xl);
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  .quote-icon {
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+  }
+
+  .quote-decoration {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 1.25rem;
+  }
+}
+
+/* Hover effect */
+.daily-quote:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.daily-quote:hover .quote-decoration {
+  animation-duration: 1s;
+}
+
+.daily-quote:hover .quote-icon {
+  opacity: 1;
+  color: var(--color-primary-light);
+}
