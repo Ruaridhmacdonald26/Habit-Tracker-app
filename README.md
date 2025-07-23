@@ -1,4 +1,4 @@
-# 🎯 HabitTracker - Modern React Habit Tracking App
+# 🎯 HabitForge - Modern React Habit Tracking App
 
 A beautiful, responsive habit tracker built with React, Vite, and modern web technologies. Track your daily habits with style, celebrate your progress, and build lasting positive routines.
 
