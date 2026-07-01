@@ -172,21 +172,12 @@ export const habitEmojis = [
 ];
 ```
 
-## 🌟 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Design inspiration from modern habit tracking apps
 - Icons by [Lucide](https://lucide.dev/)
@@ -195,7 +186,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ using React + Vite**+ Vite
+**Built using React + Vite**+ Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
